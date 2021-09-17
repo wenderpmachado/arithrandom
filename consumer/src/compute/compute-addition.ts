@@ -1,6 +1,6 @@
 interface SplitedExpression {
-    operations: string[];
-    numbers: number[];
+  operations: string[];
+  numbers: number[];
 }
 
 /**
@@ -9,13 +9,13 @@ interface SplitedExpression {
  * @returns SplitedExpression
  */
 function splitExpression(expression: string): SplitedExpression {
-    const operations = expression.split(/\d/).slice(1);
-    const numbers = expression.split(/\D/).slice(0, -1).map(Number);
+  const operations = expression.split(/\d/).slice(1);
+  const numbers = expression.split(/\D/).slice(0, -1).map(Number);
 
-    return {
-        operations,
-        numbers
-    };
+  return {
+    operations,
+    numbers
+  };
 }
 
 export default splitExpression;

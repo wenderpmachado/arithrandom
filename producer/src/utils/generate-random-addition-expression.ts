@@ -7,11 +7,11 @@ import { generateRandomInteger } from './intex';
  * @returns string
  */
 function generateRandomAdditionExpression(amount: number = 2, withEqualSign: boolean = true): string {
-    const positiveIntegers = new Array(amount).fill(0).map(() => generateRandomInteger());
-    const expression = positiveIntegers.join('+');
-    const finalExpression = !withEqualSign ? expression : `${expression}=`;
+  const positiveIntegers = new Array(amount).fill(0).map(() => generateRandomInteger());
+  const expression = positiveIntegers.join('+');
+  const finalExpression = !withEqualSign ? expression : `${expression}=`;
 
-    return finalExpression;
+  return finalExpression;
 }
 
 export default generateRandomAdditionExpression;

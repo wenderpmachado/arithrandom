@@ -7,28 +7,28 @@
  * @returns number
  */
 function compute(operator: string, firstNumber: number, secondNumber: number): number {
-    let result = 0;
+  let result = 0;
 
-    switch (operator) {
-        case '/':
-            result = firstNumber / secondNumber;
-            break;
+  switch (operator) {
+    case '/':
+      result = firstNumber / secondNumber;
+      break;
 
-        case '*':
-            result = firstNumber * secondNumber;
-            break;
+    case '*':
+      result = firstNumber * secondNumber;
+      break;
 
-        case '-':
-            result = firstNumber - secondNumber;
-            break;
+    case '-':
+      result = firstNumber - secondNumber;
+      break;
 
-        case '+':
-        default:
-            result = firstNumber + secondNumber;
-            break;
-    }
+    case '+':
+    default:
+      result = firstNumber + secondNumber;
+      break;
+  }
 
-    return result;
+  return result;
 }
 
 export default compute;

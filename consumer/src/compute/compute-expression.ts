@@ -10,14 +10,14 @@ function computeExpression(expression: string): number {
   const { numbers, operations } = splitExpression(expression);
   let computedValue = numbers.shift() as number;
 
-    for (let i = 0; i < numbers.length; i++) {
-        const sign = operations[i];
-        const currentNumber = numbers[i];
+  for (let i = 0; i < numbers.length; i++) {
+    const sign = operations[i];
+    const currentNumber = numbers[i];
 
-        computedValue = compute(sign, computedValue, currentNumber);
-    }
+    computedValue = compute(sign, computedValue, currentNumber);
+  }
 
-    return computedValue;
+  return computedValue;
 }
 
 export default computeExpression;
