@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  nodejs:
+    container_name: event-bus
+    build: '.'
+    volumes:
+      - .:/home/node/api
+    ports:
+      - '4000:4000'
+    # depends_on:
+    #   - mongodb
+    networks:
+      - app-connect
+
+#   mongodb:
+#     container_name: mongodb
+#     image: mongodb
+#     restart: unless-stopped
+#     volumes:
+#       - mongodb-data:/data
+#     environment:
+#       MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+#       MONGO_INITDB_ROOT_PASSWORD: ${DB_PASS}
+#     networks:
+#       - app-connect
+#     ports:
+#       - '27017:27017'
+#     command: mongod
+#     restart: unless-stopped
+
+# volumes:
+#   mongodb-data:
+
+networks:
+  app-connect:
+      driver: bridge
