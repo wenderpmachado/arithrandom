@@ -6,7 +6,7 @@ import { generateRandomInteger } from './intex';
  * @param withEqualSign If it will have the equal sign in the return string
  * @returns string
  */
-function generateRandomAdditionExpression(amount: number = 2, withEqualSign: boolean = true): string {
+function generateRandomAdditionEquation(amount: number = 2, withEqualSign: boolean = true): string {
   const positiveIntegers = new Array(amount).fill(0).map(() => generateRandomInteger());
   const expression = positiveIntegers.join('+');
   const finalExpression = !withEqualSign ? expression : `${expression}=`;
@@ -14,4 +14,4 @@ function generateRandomAdditionExpression(amount: number = 2, withEqualSign: boo
   return finalExpression;
 }
 
-export default generateRandomAdditionExpression;
+export default generateRandomAdditionEquation;

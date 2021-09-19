@@ -1,30 +1,30 @@
-import { generateRandomAdditionExpression } from "../../src/utils/intex";
+import { generateRandomAdditionEquation } from "../../src/utils/intex";
 
-describe('generateRandomAdditionExpression', () => {
-  it('should generate a random addition expression', () => {
-    const additionExpression = generateRandomAdditionExpression();
+describe('generateRandomAdditionEquation', () => {
+  it('should generate a random addition equation', () => {
+    const additionEquation = generateRandomAdditionEquation();
 
-    expect(additionExpression).toBeString();
+    expect(additionEquation).toBeString();
   });
 
-  it('should generate a random addition expression with 3 numbers', () => {
+  it('should generate a random addition equation with 3 numbers', () => {
     const withThreeNumbers = 3;
 
-    const additionExpression = generateRandomAdditionExpression(withThreeNumbers);
-    const splitedExpression = additionExpression.split('+');
+    const additionEquation = generateRandomAdditionEquation(withThreeNumbers);
+    const splitedEquation = additionEquation.split('+');
 
-    expect(additionExpression).toBeString();
-    expect(splitedExpression).toHaveLength(3);
+    expect(additionEquation).toBeString();
+    expect(splitedEquation).toHaveLength(3);
   });
 
-  it('should generate a random addition expression without a equal sign', () => {
+  it('should generate a random addition equation without a equal sign', () => {
     const withTwoNumbers = 2;
     const withEqualSign = false;
 
-    const additionExpression = generateRandomAdditionExpression(withTwoNumbers, withEqualSign);
-    const lastCharacter = additionExpression[additionExpression.length -1];
+    const additionEquation = generateRandomAdditionEquation(withTwoNumbers, withEqualSign);
+    const lastCharacter = additionEquation[additionEquation.length -1];
 
-    expect(additionExpression).toBeString();
+    expect(additionEquation).toBeString();
     expect(lastCharacter).not.toBe('=');
   });
 });
