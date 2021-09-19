@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+
+  nodejs:
+    container_name: consumer
+    build: '.'
+    volumes:
+      - .:/home/node/api
+    ports:
+      - '4003:4003'
+    networks:
+      - app-connect
+
+networks:
+  app-connect:
+      driver: bridge

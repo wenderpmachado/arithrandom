@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+
+  nodejs1:
+    container_name: producer1
+    build: '.'
+    volumes:
+      - .:/home/node/producer1
+    depends_on:
+      - postgres
+    networks:
+      - app-connect
+    ports:
+      - '4001:4001'
+
+  nodejs2:
+    container_name: producer2
+    build: '.'
+    volumes:
+      - .:/home/node/producer2
+    depends_on:
+      - postgres
+    networks:
+      - app-connect
+    ports:
+      - '4001:4002'
+
+  postgres:
+    container_name: producer-postgres
+    image: postgres:11
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/data
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    networks:
+      - app-connect
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres-data:
+
+networks:
+  app-connect:
+      driver: bridge
