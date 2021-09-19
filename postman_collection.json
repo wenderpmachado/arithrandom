@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "596eeb1e-1d90-4615-9fb8-19f6fd0db65d",
+		"name": "Producer/Consumer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "expressions",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{PRODUCER_API}}/expressions",
+							"host": [
+								"{{PRODUCER_API}}"
+							],
+							"path": [
+								"expressions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{EVENT_BUS_API}}/events",
+							"host": [
+								"{{EVENT_BUS_API}}"
+							],
+							"path": [
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
