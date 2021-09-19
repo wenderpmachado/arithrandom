@@ -1,4 +1,4 @@
-import { computeExpression } from "../../src/compute/index";
+import { computeExpression } from "../../src/services/compute/index";
 
 describe('computeExpression', () => {
   it('should compute an addition expression (2+3=5)', () => {
