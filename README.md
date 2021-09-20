@@ -136,18 +136,6 @@ npm run dev
 yarn dev
 ```
 
-## Roadmap 🔭
-
-* [ ] Producer generates other random expressions
-* [ ] Producer accept expression from frontend
-* [ ] Finish implementing MongoDB in the `event-bus` microservice
-* [ ] Finish implementing Postgres in the `producer` microservice
-* [ ] Increase the unit test coverage
-* [ ] Add CI/CD with GitHub Actions
-* [ ] Add ESlint
-* [ ] Add EventBus endpoint to Consumers subscribe / unsubscribe
-* [ ] Add load testing
-
 ## Tests
 
 To run the tests, the following functions were created in `package.json`:
@@ -163,8 +151,20 @@ test:clear # remove cache and the coverage from tests
 
 *Ps.: After running the coverage test, try to open `/coverage/lcov-report/index.html` in your browser*
 
-![test](.github/images/test_coverage.jpg)
+<!-- ![test](.github/images/test_coverage.jpg) -->
 
+
+## Roadmap 🔭
+
+* [ ] Producer generates other random expressions
+* [ ] Producer accept expression from frontend
+* [ ] Finish implementing MongoDB in the `event-bus` microservice
+* [ ] Finish implementing Postgres in the `producer` microservice
+* [ ] Increase the unit test coverage
+* [ ] Add CI/CD with GitHub Actions
+* [ ] Add ESlint
+* [ ] Add EventBus endpoint to Consumers subscribe / unsubscribe
+* [ ] Add load testing
 ___
 
 ## Author
