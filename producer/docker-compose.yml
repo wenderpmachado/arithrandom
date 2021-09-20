@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+  nodejs:
+    build: '.'
+    depends_on:
+      - postgres
+    networks:
+      - app-connect
+    environment:
+      EVENT_BUS_HOST: event-bus
+    ports:
+      - '8001-8002:8001'
+
+  postgres:
+    container_name: producer-postgres
+    image: postgres:11
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/data
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    networks:
+      - app-connect
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres-data:
+
+networks:
+  app-connect:
+      driver: bridge

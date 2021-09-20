@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+
+  nodejs:
+    container_name: consumer
+    build: '.'
+    volumes:
+      - .:/home/node/api
+    environment:
+      EVENT_BUS_HOST: event-bus
+    ports:
+      - '8003:8003'
+    networks:
+      - app-connect
+
+networks:
+  app-connect:
+      driver: bridge

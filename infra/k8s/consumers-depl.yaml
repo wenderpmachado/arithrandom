@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumers-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consumers
+  template:
+    metadata:
+      labels:
+        app: consumers
+    spec:
+      containers:
+        - name: consumers
+          image: wenderpmachado/consumers
+          imagePullPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consumers-srv
+spec:
+  selector:
+    app: consumers
+  ports:
+    - name: consumers
+      protocol: TCP
+      port: 8003
+      targetPort: 8003
