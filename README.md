@@ -16,8 +16,8 @@ Table of contents
       * [Kubectl](#kubectl)
       * [Docker compose](#docker-compose)
       * [Traditional way](#traditional-way)
-   * [Roadmap](#roadmap)
-   * [Tests](#testes)
+   * [Roadmap](#roadmap-)
+   * [Tests](#tests)
    * [Author](#author)
 <!--te-->
 
