@@ -2,29 +2,16 @@ version: '3'
 
 services:
 
-  nodejs1:
-    container_name: producer1
+  nodejs:
     build: '.'
-    volumes:
-      - .:/home/node/producer1
     depends_on:
       - postgres
     networks:
       - app-connect
+    environment:
+      EVENT_BUS_HOST: event-bus
     ports:
-      - '4001:4001'
-
-  nodejs2:
-    container_name: producer2
-    build: '.'
-    volumes:
-      - .:/home/node/producer2
-    depends_on:
-      - postgres
-    networks:
-      - app-connect
-    ports:
-      - '4001:4002'
+      - '8001-8002:8001'
 
   postgres:
     container_name: producer-postgres

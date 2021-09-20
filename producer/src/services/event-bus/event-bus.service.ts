@@ -10,7 +10,7 @@ export class EventBusService<IExpressionEvent> {
 
   constructor(private expressionsService: ExpressionsService) {
     this.axios = Axios.create({
-      baseURL: `http://localhost:${process.env.EVENT_BUS_PORT}`
+      baseURL: `http://${process.env.EVENT_BUS_HOST}:${process.env.EVENT_BUS_PORT}`
     })
   }
 

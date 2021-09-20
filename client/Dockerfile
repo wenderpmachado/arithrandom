@@ -1,5 +1,7 @@
 FROM node:alpine
 
+ENV CI=true
+
 WORKDIR /usr/app
 
 COPY package*.json ./

@@ -1,20 +1,20 @@
 import { Params } from '@feathersjs/feathers';
 import { Expression } from './expression.entity';
-import { ExpressionsRepository } from './expressions.repository';
 import { EventBusService } from '../event-bus/event-bus.service';
 import { generateRandomAdditionEquation } from '../../utils/intex';
 import { EVENT_TOPICS } from '../../constants';
-import logger from '../../utils/logger';
 import { ExpressionsInMemoryRepository } from './expressions-in-memory.repository';
 
 // FIXME: something with the return of create function
 // export class ExpressionsService implements Service<Expression> {
 export class ExpressionsService  {
+  // TODO: implement with real database
   // private expressionsRepository: ExpressionsRepository;
   private expressionsRepository: ExpressionsInMemoryRepository;
   private eventBusService: EventBusService<Expression>;
 
   constructor() {
+    // TODO: implement with real database
     // this.expressionsRepository = new ExpressionsRepository();
     this.expressionsRepository = new ExpressionsInMemoryRepository();
     this.eventBusService = new EventBusService<Expression>(this);
