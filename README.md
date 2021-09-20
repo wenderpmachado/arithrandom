@@ -31,9 +31,9 @@ In addition, no pre-existing message broker on the market was used. After resear
 
 This communication could be done by socket.io or gRPC, but the simplest way was chosen to demonstrate the communication, with HTTP requests through the [axios](https://github.com/axios/axios). At the same time, to facilitate the development of the application, [feathersjs](https://feathersjs.com/) was adopted combined with [Express.js](http://expressjs.com/).
 
-![postman](.github/images/postman2.jpg)
+![postman](.github/images/postman_post.jpg)
 
-![postman](.github/images/postman3.jpg)
+![postman](.github/images/postman_get.jpg)
 
 ## Architecture
 
@@ -96,7 +96,7 @@ kubectl get services
 
 ![command](.github/images/kubectl-get-services.jpg)
 
-![postman](.github/images/postman1.jpg)
+![postman](.github/images/postman_config.jpg)
 
 *Ps.: you can import the endpoints from the file `postman_collection.json`*
 
