@@ -24,6 +24,11 @@ export default {
     "src/**/*.ts",
     "!**/index.ts",
     "!**/*.d.ts",
+    "!**/app.ts",
+    "!**/config.ts",
+    "!**/constants.ts",
+    "!**/event.ts",
+    "!**/expression-event.ts",
   ],
 
   // The directory where Jest should output its coverage files

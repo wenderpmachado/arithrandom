@@ -159,7 +159,11 @@ test:cov # generate coverage report ('/coverage')
 test:clear # remove cache and the coverage from tests
 ```
 
+![test](.github/images/test.jpg)
+
 *Ps.: After running the coverage test, try to open `/coverage/lcov-report/index.html` in your browser*
+
+![test](.github/images/test_coverage.jpg)
 
 ___
 
