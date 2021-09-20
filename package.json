@@ -1,20 +1,21 @@
 {
-  "name": "bluedrop-assignment",
+  "name": "arithrandom",
   "version": "1.0.0",
-  "description": "- [Docker](https://docs.docker.com/get-docker/)",
+  "description": "A producer/consumer system, made from the scratch",
   "main": "index.js",
   "scripts": {
-    "docker:up": "./docker-compose-up.sh"
+    "docker:up": "./docker-compose-up.sh",
+    "skaffold": "skaffold dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wenderpmachado/bluedrop-assignment.git"
+    "url": "git+https://github.com/wenderpmachado/arithrandom.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wenderpmachado/bluedrop-assignment/issues"
+    "url": "https://github.com/wenderpmachado/arithrandom/issues"
   },
-  "homepage": "https://github.com/wenderpmachado/bluedrop-assignment#readme"
+  "homepage": "https://github.com/wenderpmachado/arithrandom#readme"
 }
