@@ -11,11 +11,12 @@ Table of contents
    * [Architecture](#architecture)
    * [Information flow](#information-flow)
    * [Features](#features)
-   * [How to run the project](#how-to-run-the-project)
+   * [Running the backend](#running-the-backend)
       * [Skaffold](#skaffold)
       * [Kubectl](#kubectl)
       * [Docker compose](#docker-compose)
       * [Traditional way](#traditional-way)
+   * [Running the frontend](#running-the-frontend)
    * [Roadmap](#roadmap-)
    * [Tests](#tests)
    * [Author](#author)
@@ -74,7 +75,7 @@ After the consumer receives the message, the equation is solved and a message is
 * [x] Kubernetes configuration (`infra/k8s` folder)
 * [x] [Skaffold](https://skaffold.dev) configuration
 
-## How to run the project
+## Running the backend
 
 The first step is to set the environment variables. To do this, duplicate the `.env.example` files to `.env`, changing the variables as you wish.
 
@@ -136,6 +137,18 @@ npm run dev
 yarn dev
 ```
 
+## Running the frontend
+
+After start the backend application, you can open the `client` folder and run the command:
+
+```bash
+npm run dev
+
+# or
+
+yarn dev
+```
+
 ## Tests
 
 To run the tests, the following functions were created in `package.json`:
@@ -165,6 +178,7 @@ test:clear # remove cache and the coverage from tests
 * [ ] Add ESlint
 * [ ] Add EventBus endpoint to Consumers subscribe / unsubscribe
 * [ ] Add load testing
+* [ ] Improve the frontend
 ___
 
 ## Author
